@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+{% include "includes/header_references.html" %}
+
+<body>
+
+<!-- ***** Preloader Start ***** -->
+<div id="preloader">
+    <div class="jumper">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<!-- ***** Preloader End ***** -->
+
+<!-- Header -->
+{% include "includes/header.html" %}
+
+<!-- Page Content -->
+<main>
+    {% block content %}
+
+    {% endblock %}
+</main>
+
+
+<!-- footer -->
+{% include "includes/footer.html" %}
+<!-- Script Tags -->
+{% include "includes/footer_references.html" %}
+</body>
+</html>

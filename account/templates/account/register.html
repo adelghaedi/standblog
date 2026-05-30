@@ -1,0 +1,78 @@
+{% extends "account/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% block title %}Register{% endblock %}
+{% block content %}
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('{% static "images/bg-01.jpg" %}');">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" method="post">
+					{% csrf_token %}
+					<span class="login100-form-logo">
+						<i class="zmdi zmdi-landscape"></i>
+					</span>
+
+					<span class="login100-form-title p-b-34 p-t-27">
+						Register
+					</span>
+					{% for error in errors %}
+						<p class="text text-center text-danger bg-white rounded mb-2">{{ error }}</p>
+					{% endfor %}
+
+                    {% if form.errors %}
+                        <div class="alert alert-danger">{{ form.errors }}</div>
+                    {% elif password_not_match_error %}
+                        <div class="alert alert-danger">{{ password_not_match_error }}</div>
+                    {% endif %}
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter firstname">
+                        {{ form.first_name }}
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter lastname">
+						{{ form.last_name }}
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter email">
+						{{ form.email }}
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+                        {{ form.username }}
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						{{ form.password }}
+						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="password" name="confirm_password" placeholder="Confirm Password"
+                               value="{{ confirm_password }}">
+						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Register
+						</button>
+					</div>
+
+					<div class="text-center p-t-90">
+						<a class="txt1" href="{% url 'account:login' %}">
+							Log in
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+{% endblock %}

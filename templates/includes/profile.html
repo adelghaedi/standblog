@@ -1,0 +1,27 @@
+{% load static %}
+<div class="user-profile">
+    {% if user.is_authenticated %}
+        {% if user.profile.image %}
+            <img src="{{ user.profile.image.url }}" alt="No-Piture" class="profile-pic" onclick="toggleMenu()">
+        {% else %}
+            <img src="{% static 'images/icons/person.png' %}" alt="No-Piture" class="profile-pic"
+                 onclick="toggleMenu()">
+        {% endif %}
+        <div class="dropdown-menu" id="dropdownMenu">
+            {% if user.first_name and user.last_name %}
+                <span>{{ user.first_name }} {{ user.last_name }}</span>
+            {% else %}
+                <span>{{ user.username }}</span>
+            {% endif %}
+            <hr>
+            <a href="{% url 'account:edit' %}">Edit Account</a>
+            <a href="{% url 'account:logout' %}">Log out</a>
+        </div>
+    {% else %}
+        <img src="{% static 'images/icons/person.png' %}" alt="No-Piture" class="profile-pic" onclick="toggleMenu()">
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="{% url 'account:login' %}">Log in</a>
+            <a href="{% url 'account:register' %}">Register</a>
+        </div>
+    {% endif %}
+</div>
