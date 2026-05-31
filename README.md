@@ -13,17 +13,42 @@ StandBlog is a Django-based blog application that provides a complete content ma
 - **Article Details** – Full article view with comments and likes.
 - **Recent Articles Section** – Shows latest posts on the homepage.
 
-## Tech Stack
+## Installation & Run
 
-- Python 3.x
+1.**Clone the repository**
+
+```bash
+git clone https://github.com/adelghaedi/standblog.git
+```
+
+2.**Install dependencies**
+
+```bash
+pip install -r requirements.txt
+```
+3.**Run the server:**
+
+```bash
+python manage.py runserver
+```
+
+4.**Open the browser at**
+
+```
+http://127.0.0.1:8000/
+```
+
+## Technologies
+
+- Python 3.12
 - Django (latest stable version)
 - SQLite (default, can be replaced with PostgreSQL/MySQL)
 - HTML/CSS (Bootstrap or custom styling)
 
-## Installation
+## Contributing
 
-1. **Clone the repository**
+Feel free to fork the project, make your changes, and submit a Pull Request.
 
-```bash
-git clone https://github.com/yourusername/standblog.git
-cd standblog
+## License
+
+This project is licensed under the **MIT License**.
