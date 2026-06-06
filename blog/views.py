@@ -18,14 +18,14 @@ def all_articles_on_category(request, pk):
     articles = category.articles.all()
 
     # get page
-    page_number = request.GET.get("page")
+    page_number = request.GET.get("page", 1)
 
     # paginator
     paginator = Paginator(articles, 2)
     articles_page = paginator.get_page(page_number)
 
     return render(request, "blog/article_list.html", {
-        "articles": articles_page
+        "article_list": articles_page
     })
 
 
@@ -38,7 +38,7 @@ def search_articles(request):
     page_number = request.GET.get("page")
     paginator = Paginator(result_search, 2)
     result_page = paginator.get_page(page_number)
-    return render(request, "blog/article_list.html", {"articles": result_page})
+    return render(request, "blog/article_list.html", {"article_list": result_page})
 
 
 class ArticleDetailView(DetailView):

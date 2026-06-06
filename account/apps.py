@@ -1,6 +1,6 @@
 from django.apps import AppConfig
-
+from django.utils.translation import gettext_lazy as _
 
 class AccountConfig(AppConfig):
     name = 'account'
-    verbose_name = 'بخش حساب کاربری'
+    verbose_name = _("Account section")

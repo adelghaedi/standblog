@@ -1,9 +1,10 @@
 from django.contrib import admin
+from django.utils.translation import gettext_lazy as _
 from .models import Article, Category, Comment, Message, Like
 
 
 class ArticleFilterByTitle(admin.SimpleListFilter):
-    title = "کلید های پر تکرار"
+    title = _("Repeated keys")
     parameter_name = "title"
 
     def lookups(self, request, model_admin):
