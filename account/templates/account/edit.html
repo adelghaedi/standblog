@@ -1,6 +1,10 @@
 {% extends "account/base.html" %}
+
 {% load static %}
-{% block title %}Edit Info{% endblock %}
+{% load i18n %}
+
+{% block title %}{% trans 'Edit Info' %}{% endblock %}
+
 {% block content %}
 
     <div class="limiter">
@@ -13,7 +17,7 @@
 					</span>
 
                     <span class="login100-form-title p-b-34 p-t-27">
-						Edit Account
+						{% trans 'Edit Account' %}
 					</span>
                     <div class="wrap-input100 validate-input" data-validate="Enter firstname">
                         {{ form.first_name }}
@@ -32,7 +36,7 @@
 
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn">
-                            Submit
+                            {% trans 'Submit' %}
                         </button>
                     </div>
 

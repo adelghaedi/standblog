@@ -1,7 +1,8 @@
 {% extends "account/base.html" %}
 {% load static %}
+{% load i18n %}
 
-{% block title %}Login{% endblock %}
+{% block title %}{% trans 'Login' %}{% endblock %}
 {% block content %}
     <div class="limiter">
         <div class="container-login100" style="background-image: url('{% static "images/bg-01.jpg" %}');">
@@ -13,7 +14,7 @@
 					</span>
 
                     <span class="login100-form-title p-b-34 p-t-27">
-						Log in
+						{% trans 'Log in' %}
 					</span>
                     {% if form.non_field_errors %}
                         <div class="alert alert-danger">{{ form.non_field_errors }}</div>
@@ -31,20 +32,14 @@
                     <div class="contact100-form-checkbox">
                         <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
                         <label class="label-checkbox100" for="ckb1">
-                            Remember me
+                            {% trans 'Remember me' %}
                         </label>
                     </div>
 
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn">
-                            Login
+                            {% trans 'Login' %}
                         </button>
-                    </div>
-
-                    <div class="text-center p-t-90">
-                        <a class="txt1" href="#">
-                            Forgot Password?
-                        </a>
                     </div>
                 </form>
             </div>
