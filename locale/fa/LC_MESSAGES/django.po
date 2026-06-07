@@ -239,7 +239,7 @@ msgstr "شماره تلفن"
 
 #: blog/templates/blog/message_form.html:79
 msgid "EMAIL ADDRESS"
-msgstr "ایمیل آدرس"
+msgstr "آدرس ایمیل"
 
 #: blog/templates/blog/message_form.html:83
 msgid "TELEGRAM"
