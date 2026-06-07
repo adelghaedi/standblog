@@ -17,5 +17,5 @@ class Profile(models.Model):
         return self.user.username
 
     class Meta:
-        verbose_name = "User Account"
-        verbose_name_plural = "User Accounts"
+        verbose_name = _("User Account")
+        verbose_name_plural = _("User Accounts")
