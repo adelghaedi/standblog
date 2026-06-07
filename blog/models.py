@@ -33,7 +33,7 @@ class Article(models.Model):
     slug = models.SlugField(blank=True, unique=True, verbose_name=_("Article key"))
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
+        self.slug = slugify(self.title, allow_unicode=True)
         return super().save()
 
     def get_absolute_url(self):

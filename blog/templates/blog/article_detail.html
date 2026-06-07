@@ -1,5 +1,9 @@
 {% extends "base.html" %}
+
 {% load static %}
+{% load i18n %}
+
+{% load jalali_filters %}
 
 {% block title %} {{ article.title }} {% endblock %}
 
@@ -12,7 +16,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="text-content">
-                            <h4>Article Details</h4>
+                            <h4>{% trans 'Article Details' %}</h4>
                             <h2>{{ article.title }}</h2>
                         </div>
                     </div>
@@ -46,8 +50,8 @@
                                             <h4>{{ article.title }}</h4></a>
                                         <ul class="post-info">
                                             <li><a href="#">{{ article.author.get_full_name }}</a></li>
-                                            <li><a href="#">{{ article.created }}</a></li>
-                                            <li><a href="#">10 Comments</a></li>
+                                            <li><a href="#">{{ article.created|to_jalali }}</a></li>
+                                            <li><a href="#">{{ article.comments.count }} {% trans 'Comment' %}</a></li>
                                         </ul>
                                         <p>{{ article.body }}</p>
                                         <div class="post-options">
@@ -65,13 +69,6 @@
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <div class="col-6">
-                                                    <ul class="post-share">
-                                                        <li><i class="fa fa-share-alt"></i></li>
-                                                        <li><a href="#">Facebook</a>,</li>
-                                                        <li><a href="#"> Twitter</a></li>
-                                                    </ul>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -81,7 +78,7 @@
                                 <div class="col-lg-12">
                                     <div class="sidebar-item comments">
                                         <div class="sidebar-heading">
-                                            <h2>{{ article.comments.all.count }} comments</h2>
+                                            <h2>{{ article.comments.all.count }} {% trans 'Comment' %}</h2>
                                         </div>
                                         <div class="content">
                                             <ul>
@@ -102,7 +99,8 @@
                                                                 </h4>
                                                                 <p>{{ comment.body }}</p>
                                                                 <button onclick="set_value({{ comment.id }})"
-                                                                        class="mt-2 btn btn-warning text-white">Reply
+                                                                        class="mt-2 btn btn-warning text-white">
+                                                                    {% trans 'Reply' %}
                                                                 </button>
                                                             </div>
                                                         </li>
@@ -135,7 +133,7 @@
                                 <div class="col-lg-12">
                                     <div class="sidebar-item submit-comment">
                                         <div class="sidebar-heading">
-                                            <h2>Your comment</h2>
+                                            <h2>{% trans 'Your comment' %}</h2>
                                         </div>
                                         <div class="content">
                                             <form id="comment" action="#" method="post">
@@ -150,14 +148,14 @@
                                                     <div class="col-lg-12">
                                                         <fieldset>
                                                             <textarea id="body" name="body" rows="6"
-                                                                      placeholder="Type your comment"
+                                                                      placeholder="{% trans 'Type your comment' %}"
                                                                       required=""></textarea>
                                                         </fieldset>
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <fieldset>
                                                             <button type="submit" id="form-submit" class="main-button">
-                                                                Submit
+                                                                {% trans 'Submit' %}
                                                             </button>
                                                         </fieldset>
                                                     </div>
