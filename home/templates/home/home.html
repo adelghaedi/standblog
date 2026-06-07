@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
+
 {% load static %}
+{% load i18n %}
+
 {% load filters %}
 {% load template_tags %}
+{% load jalali_filters %}
+
 {% block title %} Stand CSS Blog by TemplateMo {% endblock %}
 
 {% block content %}
@@ -27,9 +32,9 @@
                                 </div>
                                 <a href="{{ article.get_absolute_url }}"><h4>{{ article.title }}</h4></a>
                                 <ul class="post-info">
-                                    <li><a href="#">{{ article.author.username }}</a></li>
-                                    <li><a href="#">{{ article.created_at }}</a></li>
-                                    <li><a href="#">12 Comments</a></li>
+                                    <li><a href="#">{{ article.author.get_full_name }}</a></li>
+                                    <li><a href="#">{{ article.created|to_jalali }}</a></li>
+                                    <li><a href="#">{{ article.comments.all.count }} {% trans 'Comment' %}</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -63,36 +68,22 @@
                                             <a href="{{ recent_article.get_absolute_url }}">
                                                 <h4>{{ recent_article.title }}</h4></a>
                                             <ul class="post-info">
-                                                <li><a href="#">{{ recent_article.author }}</a></li>
-                                                <li><a href="#">{{ recent_article.created }}</a></li>
-                                                <li><a href="#">12 Comments</a></li>
+                                                <li><a href="#">{{ recent_article.author.get_full_name }}</a></li>
+                                                <li><a href="#">{{ recent_article.created|to_jalali }}</a></li>
+                                                <li>
+                                                    <a href="#">
+                                                        {{ recent_article.comments.all.count }} {% trans 'Comment' %}
+                                                    </a>
+                                                </li>
                                             </ul>
-                                            <p>{{ recent_article.body|cutter:120 }}</p>
-                                            <div class="post-options">
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <ul class="post-tags">
-                                                            <li><i class="fa fa-tags"></i></li>
-                                                            <li><a href="#">Beauty</a>,</li>
-                                                            <li><a href="#">Nature</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <ul class="post-share">
-                                                            <li><i class="fa fa-share-alt"></i></li>
-                                                            <li><a href="#">Facebook</a>,</li>
-                                                            <li><a href="#"> Twitter</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <p>{{ recent_article.body|cutter:200 }}</p>
                                         </div>
                                     </div>
                                 </div>
                             {% endfor %}
                             <div class="col-lg-12">
                                 <div class="main-button">
-                                    <a href="blog.html">View All Posts</a>
+                                    <a href="{% url 'blog:all_articles' %}">{% trans 'View All Posts' %}</a>
                                 </div>
                             </div>
                         </div>
