@@ -1,0 +1,723 @@
+/* ================= RTL FIX ================= */
+
+html[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Shabnam', 'Yekan', 'YekanPlus', 'Tahoma', sans-serif;
+}
+
+html[dir="rtl"] .container,
+html[dir="rtl"] .container-fluid {
+    direction: rtl;
+}
+
+html[dir="rtl"] .row {
+    direction: rtl;
+}
+
+/* Login & Register Forms */
+html[dir="rtl"] .input100 {
+    padding: 0 38px 0 5px;
+    text-align: right;
+}
+
+html[dir="rtl"] .input100:focus,
+html[dir="rtl"] .has-val.input100 {
+    padding-right: 5px;
+    padding-left: 38px;
+}
+
+html[dir="rtl"] .focus-input100::after {
+    left: auto;
+    right: 0;
+    padding-right: 5px;
+    padding-left: 0;
+    text-align: right;
+}
+
+html[dir="rtl"] .focus-input100::before {
+    left: auto;
+    right: 0;
+}
+
+html[dir="rtl"] .contact100-form-checkbox {
+    padding-right: 5px;
+    padding-left: 0;
+}
+
+html[dir="rtl"] .label-checkbox100 {
+    padding-right: 26px;
+    padding-left: 0;
+    text-align: right;
+}
+
+html[dir="rtl"] .label-checkbox100::before {
+    left: auto;
+    right: 0;
+}
+
+html[dir="rtl"] .alert-validate::before {
+    right: auto;
+    left: 0;
+    text-align: right;
+    padding: 4px 10px 4px 25px;
+}
+
+html[dir="rtl"] .alert-validate::after {
+    right: auto;
+    left: 5px;
+}
+
+html[dir="rtl"] .login100-form-btn::before {
+    left: auto;
+    right: 0;
+}
+
+/* Contact Form */
+html[dir="rtl"] .contact-form,
+html[dir="rtl"] .contact-information {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] .contact-form input,
+html[dir="rtl"] .contact-form textarea,
+html[dir="rtl"] .contact-form select {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] .contact-form label {
+    text-align: right;
+    display: block;
+    margin-bottom: 5px;
+}
+
+html[dir="rtl"] .contact-form .form-group {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+html[dir="rtl"] .contact-information ul li {
+    text-align: right;
+}
+
+html[dir="rtl"] .contact-information ul li h5,
+html[dir="rtl"] .contact-information ul li span {
+    display: block;
+    text-align: right;
+}
+
+/* Navbar */
+html[dir="rtl"] .navbar {
+    text-align: right;
+}
+
+html[dir="rtl"] .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+html[dir="rtl"] .navbar .navbar-brand {
+    margin-left: 1rem;
+    margin-right: 0;
+}
+
+html[dir="rtl"] .navbar-nav.ml-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+html[dir="rtl"] .navbar-nav .nav-item {
+    margin: 0px 15px;
+}
+
+html[dir="rtl"] button.navbar-toggler {
+    left: 20px;
+    right: auto;
+    position: absolute;
+}
+
+html[dir="rtl"] .navbar-toggler-icon {
+    display: inline-block;
+}
+
+/* Heading Page */
+html[dir="rtl"] .page-heading {
+    direction: rtl;
+}
+
+html[dir="rtl"] .heading-page .text-content {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] .heading-page .text-content h4,
+html[dir="rtl"] .heading-page .text-content h2 {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Sidebar */
+html[dir="rtl"] .sidebar {
+    text-align: right;
+}
+
+html[dir="rtl"] .sidebar .search input {
+    direction: rtl;
+    text-align: right;
+    padding-right: 15px;
+    padding-left: 0;
+}
+
+html[dir="rtl"] .sidebar-heading h2 {
+    text-align: right;
+}
+
+html[dir="rtl"] .sidebar-item ul {
+    padding-right: 0;
+}
+
+html[dir="rtl"] .sidebar-item ul li {
+    text-align: right;
+    list-style: none;
+}
+
+html[dir="rtl"] .sidebar-item ul li a {
+    display: block;
+    text-align: right;
+}
+
+html[dir="rtl"] .recent-posts ul li {
+    text-align: right;
+}
+
+html[dir="rtl"] .recent-posts ul li span {
+    display: block;
+    text-align: right;
+}
+
+/* Blog Posts */
+html[dir="rtl"] .blog-post {
+    text-align: right;
+}
+
+html[dir="rtl"] .blog-post .down-content span {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+html[dir="rtl"] .blog-post .down-content h4 {
+    text-align: right;
+}
+
+html[dir="rtl"] .blog-post .post-info {
+    padding-right: 0;
+    text-align: right;
+}
+
+html[dir="rtl"] .blog-post .post-info li {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+html[dir="rtl"] .blog-post .post-info li:not(:last-child)::after {
+    content: "|";
+    margin-right: 8px;
+    margin-left: 8px;
+    color: #ccc;
+}
+
+html[dir="rtl"] .blog-post p {
+    text-align: justify;
+}
+
+/* Post Options */
+html[dir="rtl"] .post-options .row .col-6:first-child {
+    text-align: right;
+}
+
+html[dir="rtl"] .post-options .row .col-6:last-child {
+    text-align: left;
+}
+
+html[dir="rtl"] .post-tags {
+    padding-right: 0;
+}
+
+html[dir="rtl"] .post-tags li {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+html[dir="rtl"] .post-share {
+    padding-right: 0;
+}
+
+html[dir="rtl"] .post-share li {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+/* Main Button */
+html[dir="rtl"] .main-button {
+    text-align: center;
+}
+
+html[dir="rtl"] .main-button a {
+    display: inline-block;
+}
+
+html[dir="rtl"] .col-lg-12 .main-button,
+html[dir="rtl"] .col-lg-12 .main-button a {
+    width: 100% !important;
+    display: block !important;
+    text-align: center;
+}
+
+/* Comments */
+html[dir="rtl"] .comments {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] .comments ul {
+    padding-right: 0;
+}
+
+html[dir="rtl"] .comments li {
+    list-style: none;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+html[dir="rtl"] .comments .author-thumb {
+    float: none;
+    margin-left: 0;
+    flex-shrink: 0;
+}
+
+html[dir="rtl"] .comments .author-thumb img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+html[dir="rtl"] .comments .right-content {
+    flex: 1;
+    text-align: right;
+    overflow: hidden;
+}
+
+html[dir="rtl"] .comments .right-content h4 {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+html[dir="rtl"] .comments .right-content h4 span {
+    float: none;
+    font-size: 12px;
+    font-weight: normal;
+    color: #aaa;
+}
+
+html[dir="rtl"] .comments .right-content p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+html[dir="rtl"] .comments .right-content button {
+    cursor: pointer;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 3px;
+}
+
+html[dir="rtl"] .comments li.replied {
+    padding-right: 60px;
+    padding-left: 0;
+    margin-top: 20px;
+    display: flex;
+}
+
+html[dir="rtl"] .comments li.replied .author-thumb {
+    width: 40px;
+    height: 40px;
+}
+
+html[dir="rtl"] .comments li.replied .author-thumb img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Submit Comment */
+html[dir="rtl"] .submit-comment {
+    text-align: right;
+}
+
+html[dir="rtl"] .submit-comment textarea {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] .submit-comment button,
+html[dir="rtl"] .submit-comment .main-button,
+html[dir="rtl"] .col-lg-12 fieldset button {
+    width: auto !important;
+    display: inline-block !important;
+}
+
+/* Main Banner Slider */
+html[dir="rtl"] .main-banner .item-content {
+    direction: rtl;
+    text-align: right;
+    right: 20px;
+    left: auto;
+    bottom: 20px;
+    top: auto;
+    transform: translate(0, 0);
+    width: auto;
+    max-width: 80%;
+}
+
+html[dir="rtl"] .main-banner .item-content .meta-category {
+    text-align: right;
+}
+
+html[dir="rtl"] .main-banner .item-content .meta-category span {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+html[dir="rtl"] .main-banner .item-content h4 {
+    text-align: right;
+}
+
+html[dir="rtl"] .main-banner .post-info {
+    padding-right: 0;
+    text-align: right;
+}
+
+html[dir="rtl"] .main-banner .post-info li {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+html[dir="rtl"] .main-banner .post-info li:not(:last-child)::after {
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+/* Owl Carousel */
+html[dir="rtl"] .owl-carousel {
+    direction: ltr;
+}
+
+html[dir="rtl"] .owl-carousel .item {
+    direction: rtl;
+}
+
+html[dir="rtl"] .owl-carousel .item-content {
+    direction: rtl;
+    text-align: right;
+    right: 20px;
+    left: auto;
+    bottom: 40px;
+    top: auto;
+    transform: translate(0, 0);
+}
+
+html[dir="rtl"] .owl-carousel .owl-nav {
+    direction: ltr;
+}
+
+html[dir="rtl"] .owl-carousel .owl-nav button.owl-prev {
+    left: 10px;
+    right: auto;
+}
+
+html[dir="rtl"] .owl-carousel .owl-nav button.owl-next {
+    right: 10px;
+    left: auto;
+}
+
+html[dir="rtl"] .owl-carousel .owl-nav button.owl-prev i:before {
+    content: "\f105";
+}
+
+html[dir="rtl"] .owl-carousel .owl-nav button.owl-next i:before {
+    content: "\f104";
+}
+
+/* Meta Category */
+html[dir="rtl"] .meta-category {
+    text-align: right;
+    direction: rtl;
+}
+
+html[dir="rtl"] .meta-category span {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+/* Alert */
+html[dir="rtl"] .alert {
+    text-align: right;
+}
+
+/* Pagination */
+html[dir="rtl"] .page-numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding-right: 0;
+    direction: rtl;
+}
+
+html[dir="rtl"] .page-numbers li {
+    list-style: none;
+    display: inline-block;
+}
+
+html[dir="rtl"] .page-numbers li a {
+    display: inline-block;
+    text-align: center;
+}
+
+html[dir="rtl"] .page-numbers li a .fa-angle-double-left:before {
+    content: "\f101";
+}
+
+html[dir="rtl"] .page-numbers li a .fa-angle-double-right:before {
+    content: "\f100";
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    html[dir="rtl"] .navbar .navbar-brand {
+        position: absolute;
+        right: 30px;
+        left: auto;
+        top: 25px;
+    }
+
+    html[dir="rtl"] .navbar-toggler {
+        position: absolute;
+        left: 20px;
+        right: auto;
+        top: 20px;
+    }
+
+    html[dir="rtl"] #navbarResponsive {
+        z-index: 99999;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        left: auto;
+        width: 100%;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    html[dir="rtl"] .navbar .navbar-nav .nav-item {
+        border-bottom: 1px solid #eee;
+    }
+
+    html[dir="rtl"] .navbar .navbar-nav a.nav-link {
+        padding: 15px 0px;
+        color: #1e1e1e !important;
+    }
+
+    html[dir="rtl"] .sidebar {
+        margin-right: 0px;
+        margin-left: auto;
+        margin-top: 60px;
+        padding-top: 60px;
+        border-top: 3px solid #f7f7f7;
+    }
+
+    html[dir="rtl"] .contact-us .contact-information {
+        margin-right: 0px;
+        margin-left: auto;
+        margin-top: 60px;
+    }
+
+    html[dir="rtl"] .owl-carousel .item-content {
+        width: 80%;
+        text-align: center;
+    }
+
+    html[dir="rtl"] .owl-carousel .item-content h4 {
+        font-size: 24px;
+    }
+}
+
+html[dir="rtl"] .post-options .row .col-6:first-child {
+    text-align: right;
+}
+
+html[dir="rtl"] .post-tags {
+    padding-right: 0;
+    text-align: right;
+}
+
+html[dir="rtl"] .post-tags li {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+html[dir="rtl"] .post-tags li a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+}
+
+html[dir="rtl"] .post-tags li a i {
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+/* ================= RTL FIX ================= */
+
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[dir="rtl"] .input100 {
+  padding: 0 38px 0 5px;
+  text-align: right;
+}
+
+html[dir="rtl"] .input100:focus,
+html[dir="rtl"] .has-val.input100 {
+  padding-right: 5px;
+  padding-left: 38px;
+}
+
+html[dir="rtl"] .focus-input100::after {
+  left: auto;
+  right: 0;
+  padding-right: 5px;
+  padding-left: 0;
+  text-align: right;
+}
+
+html[dir="rtl"] .focus-input100::before {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .contact100-form-checkbox {
+  padding-right: 5px;
+  padding-left: 0;
+}
+
+html[dir="rtl"] .label-checkbox100 {
+  padding-right: 26px;
+  padding-left: 0;
+  text-align: right;
+}
+
+html[dir="rtl"] .label-checkbox100::before {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .alert-validate::before {
+  right: auto;
+  left: 0;
+  text-align: right;
+  padding: 4px 10px 4px 25px;
+}
+
+html[dir="rtl"] .alert-validate::after {
+  right: auto;
+  left: 5px;
+}
+
+html[dir="rtl"] .login100-form-btn::before {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] p,
+html[dir="rtl"] a {
+  text-align: right;
+}
+
+html[dir="rtl"] .user-profile {
+    position: relative;
+    text-align: right;
+}
+
+html[dir="rtl"] .user-profile .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+html[dir="rtl"] .dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: auto;
+    left: 0;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px 0;
+    z-index: 1000;
+    display: none;
+    text-align: right;
+}
+
+html[dir="rtl"] .dropdown-menu.show {
+    display: block;
+}
+
+html[dir="rtl"] .dropdown-menu span {
+    display: block;
+    padding: 8px 15px;
+    color: #333;
+    font-weight: bold;
+    text-align: right;
+}
+
+html[dir="rtl"] .dropdown-menu hr {
+    margin: 5px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+html[dir="rtl"] .dropdown-menu a {
+    display: block;
+    padding: 8px 15px;
+    color: #333;
+    text-decoration: none;
+    text-align: right;
+    transition: background 0.3s;
+}
+
+html[dir="rtl"] .dropdown-menu a:hover {
+    background-color: #f48840;
+    color: #fff;
+}
