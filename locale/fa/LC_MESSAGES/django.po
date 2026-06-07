@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-07 10:37+0330\n"
+"POT-Creation-Date: 2026-06-07 15:05+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,6 +58,14 @@ msgstr "شماره تلفن"
 msgid "Image"
 msgstr "تصویر"
 
+#: account/models.py:20
+msgid "User Account"
+msgstr "حساب کاربری"
+
+#: account/models.py:21
+msgid "User Accounts"
+msgstr "حساب های کاربری"
+
 #: account/templates/account/edit.html:6
 msgid "Edit Info"
 msgstr "ویرایش اطلاعات"
@@ -67,7 +75,7 @@ msgid "Edit Account"
 msgstr "ویرایش حساب"
 
 #: account/templates/account/edit.html:39
-#: blog/templates/blog/article_detail.html:165
+#: blog/templates/blog/article_detail.html:158
 msgid "Submit"
 msgstr "ثبت"
 
@@ -154,9 +162,9 @@ msgid "Parent Comment"
 msgstr "نظر والد"
 
 #: blog/models.py:92 blog/templates/blog/article_detail.html:54
-#: blog/templates/blog/article_detail.html:88
-#: blog/templates/blog/article_list.html:57 home/templates/home/home.html:37
-#: home/templates/home/home.html:75
+#: blog/templates/blog/article_detail.html:81
+#: blog/templates/blog/article_list.html:57 home/templates/home/home.html:39
+#: home/templates/home/home.html:77
 msgid "Comment"
 msgstr "نظر"
 
@@ -184,15 +192,15 @@ msgstr "لایک ها"
 msgid "Article Details"
 msgstr "جزئیات مقاله"
 
-#: blog/templates/blog/article_detail.html:110
+#: blog/templates/blog/article_detail.html:103
 msgid "Reply"
 msgstr "پاسخ"
 
-#: blog/templates/blog/article_detail.html:143
+#: blog/templates/blog/article_detail.html:136
 msgid "Your comment"
 msgstr "نظر شما"
 
-#: blog/templates/blog/article_detail.html:158
+#: blog/templates/blog/article_detail.html:151
 msgid "Type your comment"
 msgstr "نظر خود را تایپ کنید"
 
@@ -245,7 +253,11 @@ msgstr "آدرس ایمیل"
 msgid "TELEGRAM"
 msgstr "تلگرام"
 
-#: home/templates/home/home.html:104
+#: home/templates/home/home.html:11 templates/includes/header.html:6
+msgid "Article Blog"
+msgstr "وبلاگ مقاله"
+
+#: home/templates/home/home.html:88
 msgid "View All Posts"
 msgstr "مشاهده همه مقاله ها"
 
@@ -257,13 +269,9 @@ msgstr "انگلیسی"
 msgid "Farsi"
 msgstr "فارسی"
 
-#: templates/includes/footer.html:17
+#: templates/includes/footer.html:8
 msgid "© 2026 All rights reserved"
 msgstr "© ۲۰۲۶ تمامی حقوق محفوظ است"
-
-#: templates/includes/header.html:6
-msgid "Article Blog"
-msgstr "وبلاگ مقاله"
 
 #: templates/includes/header.html:14
 msgid "Home"

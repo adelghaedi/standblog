@@ -13,8 +13,5 @@ urlpatterns = [
     ),
     path("search", views.search_articles, name="search_articles"),
     path("contact_us", views.MessageView.as_view(), name="contact_us"),
-    path("message/all", views.MessageListView.as_view(), name="all_messages"),
-    path("message/edit/<int:pk>", views.MessageUpdateView.as_view(), name="edit_message"),
-    path("message/delete/<int:pk>", views.MessageDeleteView.as_view(), name="delete_message"),
     path("like/<str:slug>", views.like_view, name="like_article")
 ]

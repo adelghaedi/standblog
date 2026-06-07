@@ -1,9 +1,15 @@
 {% load static %}
+
+{% load i18n %}
+
 <!DOCTYPE html>
 <html lang="{{ request.LANGUAGE_CODE }}" dir="{% if request.LANGUAGE_CODE == 'fa' %}rtl{% else %}ltr{% endif %}">
 
 <!-- Head -->
-{% include "includes/header_references.html" %}
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    {% include "includes/header_references.html" %}
+</head>
 
 <body>
 

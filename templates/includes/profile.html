@@ -6,7 +6,7 @@
             <img src="{{ user.profile.image.url }}" alt="{% trans 'No Picture' %}" class="profile-pic"
                  onclick="toggleMenu()">
         {% else %}
-            <img src="{% static 'images/icons/person.png' %}" alt="{% trans 'No Picture' %}" class="profile-pic"
+            <img src="{% static 'icons/person.png' %}" alt="{% trans 'No Picture' %}" class="profile-pic"
                  onclick="toggleMenu()">
         {% endif %}
         <div class="dropdown-menu" id="dropdownMenu">
@@ -20,7 +20,7 @@
             <a href="{% url 'account:logout' %}">{% trans 'Log out' %}</a>
         </div>
     {% else %}
-        <img src="{% static 'images/icons/person.png' %}" alt="{% trans 'No Picture' %}" class="profile-pic"
+        <img src="{% static 'icons/person.png' %}" alt="{% trans 'No Picture' %}" class="profile-pic"
              onclick="toggleMenu()">
         <div class="dropdown-menu" id="dropdownMenu">
             <a href="{% url 'account:login' %}">{% trans 'Log in' %}</a>

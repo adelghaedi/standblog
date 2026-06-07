@@ -721,3 +721,36 @@ html[dir="rtl"] .dropdown-menu a:hover {
     background-color: #f48840;
     color: #fff;
 }
+
+html[dir="rtl"] footer {
+    text-align: center !important;
+}
+
+html[dir="rtl"] footer .container {
+    text-align: center !important;
+}
+
+html[dir="rtl"] footer .row {
+    text-align: center !important;
+}
+
+html[dir="rtl"] footer .col-lg-12 {
+    text-align: center !important;
+}
+
+html[dir="rtl"] footer .copyright-text {
+    text-align: center !important;
+}
+
+html[dir="rtl"] footer .copyright-text p {
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+html[dir="rtl"] .copyright-text p {
+    position: relative;
+    left: 0;
+    right: 0;
+    text-align: center !important;
+}

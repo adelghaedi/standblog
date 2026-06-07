@@ -83,7 +83,7 @@ class ArticleListView(CustomLoginRequiredMixin, ListView):
 class MessageView(CreateView):
     model = Message
     fields = ("title", "body")
-    success_url = reverse_lazy("blog:all_messages")
+    success_url = reverse_lazy("home:index")
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
